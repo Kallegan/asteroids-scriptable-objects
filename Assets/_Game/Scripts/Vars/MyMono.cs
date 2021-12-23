@@ -19,7 +19,6 @@ namespace DefaultNamespace.Vars
             {
                 _myEvent.Raise();
             }
-           //_text.text = _myFloatRef.Value.ToString();
         }
 
         public void MyMethod()

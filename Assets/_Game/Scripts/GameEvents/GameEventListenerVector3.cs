@@ -10,7 +10,7 @@ namespace DefaultNamespace.GameEvents
         
         private void OnEnable()
         {
-            _gameEvent.Register(OnEventRaised);
+          //  _gameEvent.Register(OnEventRaised);
         }
 
         private void OnDisable()
