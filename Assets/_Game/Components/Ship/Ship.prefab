@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2970632031999273633}
   - component: {fileID: 6578066716522484772}
   - component: {fileID: 2970632031999273632}
+  - component: {fileID: 3705299328123696374}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Untagged
@@ -34,6 +35,7 @@ Transform:
   - {fileID: 2970632032652603878}
   - {fileID: 2970632033307266043}
   - {fileID: 3600351306863385139}
+  - {fileID: 3927770089656596171}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -104,6 +106,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3705299328123696374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2970632031999273636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7651345d708af34c92f6fc52a3a970c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _screenWrapEvent: {fileID: 0}
 --- !u!1 &2970632032652603877
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,6 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5889dda3c109bdc49b395002cfd09415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _screenWrapEvent: {fileID: 0}
 --- !u!1 &2970632033307266042
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,3 +331,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24a0cd419e68444499cf96316af2fa39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &6693864295690698439
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3927770089656596171}
+  - component: {fileID: 7953570767188934452}
+  m_Layer: 0
+  m_Name: EventListener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3927770089656596171
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6693864295690698439}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2970632031999273637}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7953570767188934452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6693864295690698439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f51376493dbf4ba448df72daa1f83158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEvent: {fileID: 11400000, guid: 874b12da2943a1a4b81760dd0f39ebb3, type: 2}
+  _unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3705299328123696374}
+        m_TargetAssemblyTypeName: test.ScreenWrap, Assembly-CSharp
+        m_MethodName: ScreenWrapEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2

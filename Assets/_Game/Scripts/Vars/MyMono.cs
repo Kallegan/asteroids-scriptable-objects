@@ -2,6 +2,7 @@
 using DefaultNamespace.GameEvents;
 using TMPro;
 using UnityEngine;
+using GameEvent = Test.GameEvent;
 
 namespace DefaultNamespace.Vars
 {
@@ -17,7 +18,7 @@ namespace DefaultNamespace.Vars
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                _myEvent.Raise();
+                //_myEvent.Raise();
             }
         }
 

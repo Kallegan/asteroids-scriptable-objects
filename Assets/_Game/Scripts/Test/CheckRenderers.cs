@@ -2,22 +2,28 @@ using UnityEngine;
 
 namespace Test
 {
+    
     public class CheckRenderers : MonoBehaviour
     {
+        [SerializeField] GameEvent _screenWrapEvent;
+        
+        private bool outOfBounds;
         
         void OnBecameVisible()
         {
+            outOfBounds = false;
             Debug.Log("visable");
-            
         }
 
         void OnBecameInvisible()
         {
-           
-                //todo trigger event that will take flip x/y pos for wrap. We need the player pos and camera pos.
-                
+            if (outOfBounds == false)
+            {
+                _screenWrapEvent?.Invoke();
                 Debug.Log("not visable");
-            
+                outOfBounds = true;
+            }
+          
         }
     }
 }

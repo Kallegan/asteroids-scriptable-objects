@@ -1,10 +1,15 @@
+
+using System;
+using Test;
 using UnityEngine;
+
 
 namespace test
 {
     public class ScreenWrap : MonoBehaviour
     {
-        private bool outOfBound = false;
+        [SerializeField] GameEvent _screenWrapEvent;
+        private bool outOfBound;
 
         private float _minX;
         private float _minY;
@@ -21,11 +26,9 @@ namespace test
             _maxX = (_screenBounds.x * -1);
             _maxY = (_screenBounds.y * -1);
         }
-
-
-        void ScreenWrapping() //method used for screenwrapping. Tried implementing my own using the same bounds as fruit spawn.
-
+        public void ScreenWrapEvent()
         {
+            outOfBound = true;
             if (outOfBound) //added body check to prevent triggers searching when dead.
             {
                 //check for each direction if player is crossing the 2dcollider trigger, and if so sets x/y
